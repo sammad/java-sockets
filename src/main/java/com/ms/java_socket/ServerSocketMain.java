@@ -1,4 +1,4 @@
-package com.tpt.java_socket;
+package com.ms.java_socket;
 
 import java.io.IOException;
 import java.io.InputStream;

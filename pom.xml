@@ -18,30 +18,20 @@ This is sample maven project pom.xml, preconfigured with master pom and bom.
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <!--TODO: Upgrade to latest master pom. Try 'mvn validate -Pversions-update -T1 -U' -->
-  <parent>
-    <groupId>com.tpt.pom</groupId>
-    <artifactId>tpt-master-pom</artifactId>
-    <version>2.2.02</version>
-    <relativePath />
-  </parent>
-
-  <!--TODO: Set 'groupId' as combination of com.tpt. + artifactId (or part of artifactId) -->
-  <groupId>com.tpt.change-me</groupId>
+  <groupId>com.ms</groupId>
   <artifactId>java-socket</artifactId>
   <version>0.9.00-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>${project.artifactId}</name>
-  <url>http://nexus.tpt.com/site/java-socket/</url>
+  <url></url>
   <inceptionYear>2018</inceptionYear>
 
   <!-- TODO: Replace with your name. Each project should have one contact person. -->
   <developers>
     <developer>
-      <id>ada.lovelace</id>
-      <name>Ada Lovelace</name>
-      <email>ada.lovelace@iongroup.com</email>
+      <id>sammad</id>
+      <name>Madhur Sambhar</name>
       <roles>
         <role>owner</role>
       </roles>
@@ -52,22 +42,22 @@ This is sample maven project pom.xml, preconfigured with master pom and bom.
     <developerConnection>scm:git:${project.scm.url}</developerConnection>
     <tag>HEAD</tag>
     <!-- TODO: This is project's Git url - it's needed for maven release -->
-    <url>https://portal.tpt.com/stash/scm/REPLACE-THIS/java-socket.git</url>
+    <url></url>
   </scm>
   <issueManagement>
     <system>Jira</system>
     <!-- TODO: Replace with project's Jira url -->
-    <url>https://portal.tpt.com/processpoint/browse/REPLACE-THAT</url>
+    <url></url>
   </issueManagement>
   <ciManagement>
     <system>Bamboo</system>
     <!-- TODO: Replace with project's Bamboo or Jenkins url -->
-    <url>https://portal.tpt.com/bamboo/browse/AND-THIS-ALSO</url>
+    <url></url>
   </ciManagement>
   <distributionManagement>
     <site>
       <id>webdav-site</id>
-      <url>dav:http://nexus.tpt.com/site/java-socket/${project.version}/</url>
+      <url></url>
     </site>
   </distributionManagement>
 
@@ -75,27 +65,15 @@ This is sample maven project pom.xml, preconfigured with master pom and bom.
   <properties>
     <maven-surefire.runOrder>random</maven-surefire.runOrder>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <!-- TODO: Upgrade to latest master BOM (Bill of Materials) -->
-    <tpt-master-bom.version>1.1.11</tpt-master-bom.version>
-  </properties>
+   </properties>
 
   <!-- Versions go to '/project/dependencyManagement', scopes to '/project/dependencies' element -->
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>com.tpt.bom</groupId>
-        <artifactId>tpt-master-bom</artifactId>
-        <version>${tpt-master-bom.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
   <!-- In multy-module projects, dependencies must not be inherited. All dependencies must be set in module pom. -->
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
