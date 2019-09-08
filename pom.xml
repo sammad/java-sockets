@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO:
+
+This is sample maven project pom.xml, preconfigured with master pom and bom.
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+   Please delete all TODOs from pom.xml before committing
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+- master pom holds maven plugin versions and configuration, adds maven repository configurations
+ and basic security checks
+- master bom import adds 3rd party dependencies version. This helps developers use same versions
+ through all project.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!--TODO: Upgrade to latest master pom. Try 'mvn validate -Pversions-update -T1 -U' -->
+  <parent>
+    <groupId>com.tpt.pom</groupId>
+    <artifactId>tpt-master-pom</artifactId>
+    <version>2.2.02</version>
+    <relativePath />
+  </parent>
+
+  <!--TODO: Set 'groupId' as combination of com.tpt. + artifactId (or part of artifactId) -->
+  <groupId>com.tpt.change-me</groupId>
+  <artifactId>java-socket</artifactId>
+  <version>0.9.00-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>${project.artifactId}</name>
+  <url>http://nexus.tpt.com/site/java-socket/</url>
+  <inceptionYear>2018</inceptionYear>
+
+  <!-- TODO: Replace with your name. Each project should have one contact person. -->
+  <developers>
+    <developer>
+      <id>ada.lovelace</id>
+      <name>Ada Lovelace</name>
+      <email>ada.lovelace@iongroup.com</email>
+      <roles>
+        <role>owner</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <scm>
+    <developerConnection>scm:git:${project.scm.url}</developerConnection>
+    <tag>HEAD</tag>
+    <!-- TODO: This is project's Git url - it's needed for maven release -->
+    <url>https://portal.tpt.com/stash/scm/REPLACE-THIS/java-socket.git</url>
+  </scm>
+  <issueManagement>
+    <system>Jira</system>
+    <!-- TODO: Replace with project's Jira url -->
+    <url>https://portal.tpt.com/processpoint/browse/REPLACE-THAT</url>
+  </issueManagement>
+  <ciManagement>
+    <system>Bamboo</system>
+    <!-- TODO: Replace with project's Bamboo or Jenkins url -->
+    <url>https://portal.tpt.com/bamboo/browse/AND-THIS-ALSO</url>
+  </ciManagement>
+  <distributionManagement>
+    <site>
+      <id>webdav-site</id>
+      <url>dav:http://nexus.tpt.com/site/java-socket/${project.version}/</url>
+    </site>
+  </distributionManagement>
+
+  <!-- TODO: Additional properties, on top of properties from master pom -->
+  <properties>
+    <maven-surefire.runOrder>random</maven-surefire.runOrder>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- TODO: Upgrade to latest master BOM (Bill of Materials) -->
+    <tpt-master-bom.version>1.1.11</tpt-master-bom.version>
+  </properties>
+
+  <!-- Versions go to '/project/dependencyManagement', scopes to '/project/dependencies' element -->
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.tpt.bom</groupId>
+        <artifactId>tpt-master-bom</artifactId>
+        <version>${tpt-master-bom.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <!-- In multy-module projects, dependencies must not be inherited. All dependencies must be set in module pom. -->
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>

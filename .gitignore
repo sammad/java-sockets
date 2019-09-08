@@ -1,0 +1,79 @@
+###
+### https://portal.tpt.com/stash/projects/DO/repos/dev-templates/browse/gitignore-TEMPLATE
+### - name this file '.gitignore' and
+### - add it into root of your project
+###
+
+### Maven template
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+overlays
+
+### Eclipse template
+.classpath
+.project
+.settings/
+
+### IDEA template
+.idea/
+*.iml
+*.ipr
+*.iws
+atlassian-ide-plugin.xml
+
+### NetBeans template
+nbactions.xml
+nb-configuration.xml
+
+### editors template
+*~
+*#
+*.log
+*.bak
+
+### OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+### maven profiler
+.profiler
+
+### Stuff from https://github.com/github/gitignore/blob/master/Java.gitignore
+# Compiled class file
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.kar
+*.7z
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# allow maven wrapper jar
+!.mvn/wrapper/maven-wrapper.jar
+
+### maven profiler
+.profiler
+
+### Various binary documents
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.pdf
