@@ -8,15 +8,15 @@ The project is ... TODO
 
 Project links
 -------------
-* Git repo [https://portal.tpt.com/stash/scm/REPLACE-THIS/java-socket.git](https://portal.tpt.com/stash/scm/REPLACE-THIS/java-socket.git)
-* Jira [link](https://portal.tpt.com/processpoint/browse/REPLACE-THAT)
+* Git repo [https://github.com/sammad/java-sockets.git](https://github.com/sammad/java-sockets.git)
+* Jira [link]()
 * CI jobs
-  * [build job](https://portal.tpt.com/bamboo/TODO-B)
-  * [sonar job](https://portal.tpt.com/bamboo/TODO-S)
-  * [sanitizer job](https://portal.tpt.com/bamboo/TODO-SA)
-  * [pullrequest-sonar-check job](https://portal.tpt.com/bamboo/TODO-PRSC)
-  * [release job](https://portal.tpt.com/bamboo/TODO-R)
-* [Sonar report](http://sonar.tpt.com/TODO)
+  * [build job]()
+  * [sonar job]()
+  * [sanitizer job]()
+  * [pullrequest-sonar-check job]()
+  * [release job]()
+* [Sonar report]()
 
 
 Project characteristics
@@ -34,10 +34,10 @@ Prerequisites
 Contributing
 ------------
 
-* Configure Git ([link](https://portal.tpt.com/infopoint/display/CAT/Git+Basics#GitBasics-Gitconfiguration))
+* Configure Git ([link]))
 * Get sources and build project
 ```bash
-  git clone https://portal.tpt.com/stash/scm/REPLACE-THIS/java-socket.git
+  git clone https://github.com/sammad/java-sockets.git
   cd java-socket
   mvn clean install
 ```
@@ -56,7 +56,7 @@ How to use java-socket
 
 ```
 <dependency>
-  <groupId>com.tpt.change-me</groupId>
+  <groupId>com.ms</groupId>
   <artifactId>java-socket</artifactId>
   <version>0.9.00-SNAPSHOT</version>
 </dependency>
